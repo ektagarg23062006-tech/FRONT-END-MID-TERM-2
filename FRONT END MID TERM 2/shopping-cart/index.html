@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f5ef" />
+    <title>Your cart | Paper &amp; Pen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Paper and Pen home">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span>paper<span class="brand-amp">&amp;</span>pen</span>
+      </a>
+      <span class="header-note">Thoughtful things for your desk</span>
+      <a class="continue-link" href="#cart">Continue shopping <span aria-hidden="true">&#8599;</span></a>
+    </header>
+
+    <main class="page-shell" id="cart">
+      <section class="cart-heading" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">YOUR PICKS, ALL IN ONE PLACE</p>
+          <h1 id="page-title">Your cart<span class="heading-period">.</span></h1>
+        </div>
+        <p class="item-count" id="item-count" aria-live="polite"></p>
+      </section>
+
+      <div class="cart-layout">
+        <section class="cart-panel" aria-label="Shopping cart items">
+          <div class="table-scroll">
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col" class="total-heading">Total</th>
+                  <th scope="col"><span class="visually-hidden">Remove item</span></th>
+                </tr>
+              </thead>
+              <tbody id="cart-items"></tbody>
+            </table>
+          </div>
+          <div class="empty-state" id="empty-state" hidden>
+            <div class="empty-mark" aria-hidden="true">&#10003;</div>
+            <h2>Your cart is empty</h2>
+            <p>Looks like your next great idea is waiting to be written down.</p>
+            <a class="shop-link" href="#cart">Browse stationery <span aria-hidden="true">&#8594;</span></a>
+          </div>
+          <div class="cart-footnote" id="cart-footnote">
+            <span class="leaf-mark" aria-hidden="true">&#10022;</span>
+            <span>Good things, packed with care.</span>
+          </div>
+        </section>
+
+        <aside class="order-summary" aria-labelledby="summary-title">
+          <div class="summary-topline">
+            <p class="eyebrow">THE NUMBERS</p>
+            <span class="summary-spark" aria-hidden="true">&#10022;</span>
+          </div>
+          <h2 id="summary-title">Order summary</h2>
+          <div class="summary-lines">
+            <div class="summary-line">
+              <span>Subtotal</span>
+              <span id="subtotal">Rs. 0</span>
+            </div>
+            <div class="summary-line discount-line" id="discount-line" hidden>
+              <span>Order discount <span class="discount-rate">10%</span></span>
+              <span id="discount">- Rs. 0</span>
+            </div>
+          </div>
+          <div class="discount-note" id="discount-note">
+            <span class="note-icon" aria-hidden="true">&#8593;</span>
+            <span>Add <strong id="amount-to-discount">Rs. 460</strong> more to unlock 10% off.</span>
+          </div>
+          <div class="summary-total">
+            <span>Total payable</span>
+            <strong id="total">Rs. 0</strong>
+          </div>
+          <p class="tax-note">Discount applies automatically on orders of Rs. 1,000 or more.</p>
+          <button class="checkout-button" type="button" id="checkout-button">
+            <span>Continue to checkout</span>
+            <span aria-hidden="true">&#8594;</span>
+          </button>
+          <div class="secure-note"><span aria-hidden="true">&#9679;</span> Secure checkout</div>
+        </aside>
+      </div>
+
+      <footer class="page-footer">
+        <span>Made for lists, sketches &amp; everything in between.</span>
+        <span>Paper &amp; Pen <span class="footer-dot">&#183;</span> Est. 2024</span>
+      </footer>
+    </main>
+  </body>
+</html>

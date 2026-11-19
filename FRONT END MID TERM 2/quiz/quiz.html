@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#eef3f1" />
+    <title>JavaScript Quick Check</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="quiz.css" />
+    <script src="quiz.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="lab-brand" href="quiz.html" aria-label="JavaScript Lab home">
+        <span class="brand-symbol" aria-hidden="true">{ }</span>
+        <span>script<span class="brand-accent">/</span>school</span>
+      </a>
+      <span class="topbar-label">JAVASCRIPT FOUNDATIONS <span class="topbar-dot"></span> QUICK CHECK</span>
+    </header>
+
+    <main class="quiz-page">
+      <section class="quiz-intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">A LITTLE PRACTICE GOES A LONG WAY</p>
+          <h1 id="page-title">JavaScript<br /><span>quick check.</span></h1>
+        </div>
+        <div class="intro-stamp" aria-hidden="true">
+          <span>4</span>
+          <small>QUESTIONS</small>
+        </div>
+      </section>
+
+      <section class="quiz-panel" aria-label="Multiple choice quiz">
+        <div id="question-view">
+          <div class="progress-head">
+            <p class="question-counter" id="question-counter" aria-live="polite">QUESTION 1 <span>/ 4</span></p>
+            <p class="progress-percent" id="progress-percent">25%</p>
+          </div>
+          <div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="4" aria-valuenow="1" id="progress-track">
+            <span class="progress-fill" id="progress-fill"></span>
+          </div>
+
+          <form id="answer-form">
+            <fieldset class="question-fieldset">
+              <legend class="question-text" id="question-text"></legend>
+              <div class="options-list" id="options-list"></div>
+            </fieldset>
+            <div class="question-footer">
+              <span class="selection-hint" id="selection-hint">Choose one answer to continue</span>
+              <button class="next-button" id="next-button" type="submit" disabled>
+                <span id="next-label">Next question</span>
+                <span class="button-arrow" aria-hidden="true">&#8594;</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <section class="result-view" id="result-view" aria-labelledby="result-title" hidden>
+          <p class="eyebrow">THAT'S A WRAP</p>
+          <div class="result-mark" aria-hidden="true">&#10003;</div>
+          <h2 id="result-title">Nice work showing up.</h2>
+          <p class="result-message" id="result-message"></p>
+          <div class="score-board" aria-label="Your quiz score">
+            <div class="score-cell">
+              <span class="score-label">YOUR SCORE</span>
+              <strong id="score-result">0/4</strong>
+            </div>
+            <div class="score-divider"></div>
+            <div class="score-cell">
+              <span class="score-label">PERCENTAGE</span>
+              <strong id="percentage-result">0%</strong>
+            </div>
+          </div>
+          <button class="restart-button" id="restart-button" type="button">
+            <span aria-hidden="true">&#8634;</span> Try again
+          </button>
+        </section>
+      </section>
+
+      <footer class="page-footer">
+        <span>Small steps. Strong foundations.</span>
+        <span>JS LAB <span class="footer-dot">&#183;</span> 01</span>
+      </footer>
+    </main>
+  </body>
+</html>
